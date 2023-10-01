@@ -1,0 +1,37 @@
+# Display a welcome message
+print("Welcome to DKSRA Student Grade Calculator Application")
+
+# Start an infinite loop
+while True:
+    try:
+        # Ask the user to enter the student's marks
+        marks = float(input("Enter the student's marks: "))
+        # Check the range of marks and assign a grade accordingly
+        if 90 <= marks <= 100:
+            grade = "A+"
+        elif 80 <= marks < 90:
+            grade = "A"
+        elif 70 <= marks < 80:
+            grade = "B"
+        elif 60 <= marks < 70:
+            grade = "C"
+        elif 50 <= marks < 60:
+            grade = "D"
+        elif 0 <= marks < 50:
+            grade = "F"
+        else:
+            # Handle invalid input range and continue the loop
+            print("Invalid input! Please enter marks between 0 and 100.")
+            continue
+        # Print the calculated grade
+        print(f"The student's grade is: {grade}")
+        # Ask if the user wants to calculate another grade
+        another = input("Do you want to calculate another grade? (yes/no): ").lower()
+        # Check if the user's response is not "yes" to exit the loop
+        if another != "yes":
+            # If the user enters anything other than "yes," break out of the loop
+            print("Thanks! for using DKSRA Student Grade Calculator Application.")
+            break
+    except ValueError:
+        # Handle non-numeric input gracefully
+        print("Invalid input! Please enter a valid numeric value for marks.")
