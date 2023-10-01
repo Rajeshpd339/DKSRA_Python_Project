@@ -1,115 +1,119 @@
 # Display welcome message and start an infinite loop
 print("Welcome to DKSRA Base Conversion Application:")
 while True:
-    # Display menu options
-    print("For Enter Decimal Number press-1\nFor Enter Binary Number press-2\nFor Enter Octal Number press-3\nFor Enter Hexadecimal Number press-4\nPress 0 for Exit")
-    choice = int(input())  # Get the user's choice
+    try:
+        # Display menu options
+        print("For Enter Decimal Number press-1\nFor Enter Binary Number press-2\nFor Enter Octal Number press-3\nFor Enter Hexadecimal Number press-4\nPress 0 for Exit")
+        choice = int(input())  # Get the user's choice
 
-    # Conversion for decimal numbers
-    if choice == 1:
-        number = int(input("Enter Decimal Number: "))
-        print("Convert Decimal to Binary Number press-2 \nConvert Decimal to Octal Number press-3 \nConvert Decimal to Hexadecimal Number press-4")
-         # Initialize a variable 'a' to control the number of invalid choices.
-        a = 3  # Three chances for a valid choice
-        # Enter a loop to handle the user's choice for conversion.
-        while a > 0:
-            user_choice = int(input("Enter your choice 2,3,4="))
-            if user_choice == 2:
-                result = bin(number)[2:]  # Convert decimal to binary
-                print("Binary Number is:", result)
-            elif user_choice == 3:
-                result = oct(number)[2:]  # Convert decimal to octal
-                print("Octal Number is:", result)
-            elif user_choice == 4:
-                result = hex(number)[2:]  # Convert decimal to hexadecimal
-                print("Hexadecimal Number is:", result)
-            else:
-                print("Sorry you Enter wrong choice!")
-                a = a-1
+        # Conversion for decimal numbers
+        if choice == 1:
+            number = int(input("Enter Decimal Number: "))
+            print("Convert Decimal to Binary Number press-2 \nConvert Decimal to Octal Number press-3 \nConvert Decimal to Hexadecimal Number press-4")
+             # Initialize a variable 'a' to control the number of invalid choices.
+            a = 3  # Three chances for a valid choice
+            # Enter a loop to handle the user's choice for conversion.
+            while a > 0:
+                user_choice = int(input("Enter your choice 2,3,4="))
+                if user_choice == 2:
+                    result = bin(number)[2:]  # Convert decimal to binary
+                    print("Binary Number is:", result)
+                elif user_choice == 3:
+                    result = oct(number)[2:]  # Convert decimal to octal
+                    print("Octal Number is:", result)
+                elif user_choice == 4:
+                    result = hex(number)[2:]  # Convert decimal to hexadecimal
+                    print("Hexadecimal Number is:", result)
+                else:
+                    print("Sorry you Enter wrong choice!")
+                    a = a-1
+                    continue
+                break
+
+        # Conversion for binary numbers
+        elif choice == 2:
+            number = int(input("Enter Binary Number: "), 2)
+            print("Convert Binary to Decimal Number press-1\nConvert Binary to Octal Number press-3 \nConvert Binary to Hexadecimal Number press-4")
+            a = 123
+            while a > 0:
+                user_choice = int(input("Enter your choice 1,3,4="))
+                if user_choice == 1:
+                    result = int(number)  # Convert binary to decimal
+                    print("Decimal Number is:", result)
+                elif user_choice == 3:
+                    result = oct(number)[2:]  # Convert binary to octal
+                    print("Octal Number is:", result)
+                elif user_choice == 4:
+                    result = hex(number)[2:]  # Convert binary to hexadecimal
+                    print("Hexadecimal Number is:", result)
+                else:
+                    print("Sorry you Enter wrong choice!")
+                    a = a // 10
+                    continue
+                break
+
+        # Conversion for octal numbers
+        elif choice == 3:
+            number = int(input("Enter Octal Number: "), 8)
+            print("Convert Octal to Decimal Number press-1\nConvert Octal to Binary Number press-2\nConvert Octal to Hexadecimal Number press-4")
+            a = 123
+            while a > 0:
+                user_choice = int(input("Enter your choice 1,2,4="))
+                if user_choice == 1:
+                    result = int(number)  # Convert octal to decimal
+                    print("Decimal Number is:", result)
+                elif user_choice == 2:
+                    result = bin(number)[2:]  # Convert octal to binary
+                    print("Binary Number is:", result)
+                elif user_choice == 4:
+                    result = hex(number)[2:]  # Convert octal to hexadecimal
+                    print("Hexadecimal Number is:", result)
+                else:
+                    print("Sorry you Enter wrong choice!")
+                    a = a // 10
+                    continue
+                break
+
+        # Conversion for hexadecimal numbers
+        elif choice == 4:
+            number = int(input("Enter Hexadecimal Number: "), 16)
+            print("Convert Hexadecimal to Decimal Number press-1\nConvert Hexadecimal to Binary Number press-2 \nConvert Hexadecimal to Octel Number press-3")
+             # Initialize a variable 'a' to control the number of invalid choices.
+            a = 3  # Three chances for a valid choice
+            # Enter a loop to handle the user's choice for conversion.
+            while a > 0:
+                user_choice = int(input("Enter your choice 1,2,3="))
+                if user_choice == 1:
+                    result = int(number)  # Convert hexadecimal to decimal
+                    print("Decimal Number is:", result)
+                elif user_choice == 2:
+                    result = bin(number)[2:]  # Convert hexadecimal to binary
+                    print("Binary Number is:", result)
+                elif user_choice == 3:
+                    result = oct(number)[2:]  # Convert hexadecimal to octal
+                    print("Octal Number is:", result)
+                else:
+                    print("Sorry you Enter wrong choice!")
+                    a = a-1
+                    continue
+                break
+
+        # Exit the program
+        elif choice == 0:
+            print("Thanks! You are Exiting the program......")
+            print("Press Enter for Continue or any other key for exit!")
+            a = input()
+            if a == "":  # Restart the loop if the user presses Enter
+                print("Welcome Back to DSKRA Base Conversion Application:")
                 continue
-            break
-
-    # Conversion for binary numbers
-    elif choice == 2:
-        number = int(input("Enter Binary Number: "), 2)
-        print("Convert Binary to Decimal Number press-1\nConvert Binary to Octal Number press-3 \nConvert Binary to Hexadecimal Number press-4")
-        a = 123
-        while a > 0:
-            user_choice = int(input("Enter your choice 1,3,4="))
-            if user_choice == 1:
-                result = int(number)  # Convert binary to decimal
-                print("Decimal Number is:", result)
-            elif user_choice == 3:
-                result = oct(number)[2:]  # Convert binary to octal
-                print("Octal Number is:", result)
-            elif user_choice == 4:
-                result = hex(number)[2:]  # Convert binary to hexadecimal
-                print("Hexadecimal Number is:", result)
             else:
-                print("Sorry you Enter wrong choice!")
-                a = a // 10
-                continue
-            break
+                break # Exit the program if the user enters any key other than Enter
 
-    # Conversion for octal numbers
-    elif choice == 3:
-        number = int(input("Enter Octal Number: "), 8)
-        print("Convert Octal to Decimal Number press-1\nConvert Octal to Binary Number press-2\nConvert Octal to Hexadecimal Number press-4")
-        a = 123
-        while a > 0:
-            user_choice = int(input("Enter your choice 1,2,4="))
-            if user_choice == 1:
-                result = int(number)  # Convert octal to decimal
-                print("Decimal Number is:", result)
-            elif user_choice == 2:
-                result = bin(number)[2:]  # Convert octal to binary
-                print("Binary Number is:", result)
-            elif user_choice == 4:
-                result = hex(number)[2:]  # Convert octal to hexadecimal
-                print("Hexadecimal Number is:", result)
-            else:
-                print("Sorry you Enter wrong choice!")
-                a = a // 10
-                continue
-            break
-
-    # Conversion for hexadecimal numbers
-    elif choice == 4:
-        number = int(input("Enter Hexadecimal Number: "), 16)
-        print("Convert Hexadecimal to Decimal Number press-1\nConvert Hexadecimal to Binary Number press-2 \nConvert Hexadecimal to Octel Number press-3")
-         # Initialize a variable 'a' to control the number of invalid choices.
-        a = 3  # Three chances for a valid choice
-        # Enter a loop to handle the user's choice for conversion.
-        while a > 0:
-            user_choice = int(input("Enter your choice 1,2,3="))
-            if user_choice == 1:
-                result = int(number)  # Convert hexadecimal to decimal
-                print("Decimal Number is:", result)
-            elif user_choice == 2:
-                result = bin(number)[2:]  # Convert hexadecimal to binary
-                print("Binary Number is:", result)
-            elif user_choice == 3:
-                result = oct(number)[2:]  # Convert hexadecimal to octal
-                print("Octal Number is:", result)
-            else:
-                print("Sorry you Enter wrong choice!")
-                a = a-1
-                continue
-            break
-
-    # Exit the program
-    elif choice == 0:
-        print("Thanks! You are Exiting the program......")
-        print("Press Enter for Continue or any other key for exit!")
-        a = input()
-        if a == "":  # Restart the loop if the user presses Enter
-            print("Welcome Back to DSKRA Base Conversion Application:")
-            continue
+        # Handle invalid input
         else:
-            break # Exit the program if the user enters any key other than Enter
-
-    # Handle invalid input
-    else:
-        print("Sorry! Your Given number is Invalid")
-        print("Re-Enter your Number")
-        continue # Allow the user to re-enter their choice
+            print("Sorry! Your Given number is Invalid")
+            print("Re-Enter your Number")
+            continue # Allow the user to re-enter their choice
+    except ValueError:
+        # Handle non-integer input gracefully
+        print("Invalid input. Please enter a valid integer.")
