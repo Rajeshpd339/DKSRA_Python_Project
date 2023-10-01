@@ -309,3 +309,102 @@ while True:
     except ValueError:
         # Handle non-numeric input gracefully
         print("Invalid input! Please enter a valid numeric value for marks.")
+
+
+
+
+
+
+
+
+.......................................................
+
+1. वृत्त (Circle)
+2. घन (Cube)
+3. आयत (Rectangle)
+4. गोला (Sphere)
+5. त्रिभुज (Triangle)
+6. वर्ग (Square)
+7. त्रिभुज (हेरोन का सूत्र) (Triangle - Heron's Formula)
+8. परललोग्राम (Parallelogram)
+9. रोंबस (Rhombus)
+10. समकोण त्रिभुज (Right Angle Triangle)
+11. समकोण समांतर त्रिभुज (Isosceles Right Angle Triangle)
+12. समकोण त्रिभुज (Equilateral Triangle)
+13. त्रेजियम (Trapezium)
+14. चतुर्भुज (Quadrilateral)
+15. डायमंड (Kite)
+16. वृत्त क्षेत्रफल (Circle Sector)
+17. फ्रस्टम (Frustum)
+18. घनाभ (Cuboid)
+19. दायरिक सिलेंडर (Right Circular Cylinder)
+20. दायरिक शंकु (Right Circular Cone)
+21. गोला (Sphere)
+22. गोलाकार आधा (Hemisphere)
+23. प्रिज्म (Prism)
+24. पिरामिड (Pyramid)
+25. त्रिकोण (Tetrahedron)
+26. नियमित षट्कोण (Regular Hexagon)
+27. विविध आकार (Miscellaneous Shapes)
+...............................................
+Formula
+....................
+Rectangle :
+Area = l×b
+Perimeter = 2(l+b)
+Square :Area = a×a
+Perimeter = 4a
+Parallelogram
+Area = l×h
+Perimeter = 2(l+b)
+Triangle :
+Area =12×b×h
+ or √s(s−a)(s−b)(s−c),where s=a+b+c2
+Right angle Triangle :
+Area =12×b×h
+Perimeter = Sum of all sides
+Isosceles right angle triangle :
+Area = 12×b×hPerimeter = 2a+d, where d=a√
+Equilateral Triangle :
+Area = √34a2
+Perimeter = 3a
+Trapezium :
+Area =12h×
+(sum of parallel sides)$
+Perimeter = Sum of all sides
+Rhombus :Area = 12×d1×d2, where d1,d2 are diagonals
+Perimeter = 4l
+Quadrilateral Area = 12×b×h
+Kite :Area = 12×d1×d2, where d1,d2 are diagonals
+Perimeter = 2 × Sum on non-adjacent sides
+Circle :Area = πr2
+Circumference = 2πr
+Area of sector of a circle = θπr2 360∘
+Frustum :Curved surface area = πh(r1+r2)
+Surface area = π(r21+h(r1+r2)+r22)
+Cube :Volume: V = a3
+Lateral surface area = 4a2
+Surface Area: S = 6a2
+Diagonal (d) = √3a
+Cuboid :Volume of cuboid: lbh
+Total surface area = 2(lb+bh+hl)
+Length of diagonal = √(l2+b2+h2)
+Right Circular Cylinder :
+Volume of Cylinder = πr2h
+Lateral Surface Area (LSA or CSA) = 2πrh
+Total Surface Area = TSA = 2πr(r+h)
+Volume of hollow cylinder = πrh(R2–r2)
+Right Circular cone :
+Volume = 13πr2h
+Curved surface area: CSA= πrl
+Total surface area = TSA = πr(r+l)
+Sphere
+Volume: V = 43πr3
+Surface Area: S = 4πr2
+Hemisphere :
+Volume = 23πr3
+Curved surface area(CSA) = 2πr2
+Total surface area = TSA = 3πr2
+Prism :
+Volume = Base area × h
+L
