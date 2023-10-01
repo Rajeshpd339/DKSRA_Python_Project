@@ -1,0 +1,311 @@
+import math
+# Display a menu for the user to select a shape
+print("Welcome to DSKRA Shape area and perimeter calculations Application.")
+while True:
+    try:
+        print("1. Circle")
+        print("2. Cube")
+        print("3. Rectangle")
+        print("4. Sphere")
+        print("5. Triangle")
+        print("6. Square")
+        print("7. Triangle (Heron's Formula)")
+        print("8. Parallelogram")
+        print("9. Rhombus")
+        print("10. Right Angle Triangle")
+        print("11. Isosceles Right Angle Triangle")
+        print("12. Equilateral Triangle")
+        print("13. Trapezium")
+        print("14. Quadrilateral")
+        print("15. Kite")
+        print("16. Circle Sector")
+        print("17. Frustum")
+        print("18. Cuboid")
+        print("19. Right Circular Cylinder")
+        print("20. Right Circular Cone")
+        print("21. Sphere")
+        print("22. Hemisphere")
+        print("23. Prism")
+        print("24. Pyramid")
+        print("25. Tetrahedron")
+        print("26. Regular Hexagon")
+        print("27. Miscellaneous Shapes")
+        print("Press 0 to Exit")  # Add an option to exit the program
+        # Get the user's choice
+        choice = int(input("Enter your choice to find the area and perimeter: "))
+        # Calculate and display the area and perimeter based on the user's choice
+        if choice == 1:
+            # Calculate the area and circumference of a circle
+            r = eval(input("Enter the radius of the circle: "))
+            Area = 3.14 * (r**2)
+            Circumference = 2 * 3.14 * r
+            print(f"Area of Circle = {Area}")
+            print(f"Circumference of Circle = {Circumference}")
+        elif choice == 2:
+            # Calculate the area of a cube
+            edge = eval(input("Enter the edge length of the cube: "))
+            Area = 6 * (edge**2)
+            print(f"Area of Cube = {Area}")
+        elif choice == 3:
+            # Calculate the area and perimeter of a rectangle
+            length = eval(input("Enter the length of the rectangle: "))
+            breadth = eval(input("Enter the breadth of the rectangle: "))
+            Area = length * breadth
+            Perimeter = 2 * (length + breadth)
+            print(f"Area of Rectangle = {Area}")
+            print(f"Perimeter of Rectangle = {Perimeter}")
+        elif choice == 4:
+            # Calculate the surface area of a sphere
+            r = eval(input("Enter the radius of the sphere: "))
+            Area = 4 * 3.14 * (r**2)
+            print(f"Surface Area of Sphere = {Area}")
+        elif choice == 5:
+            # Calculate the area of a triangle
+            base = eval(input("Enter the base length of the triangle: "))
+            height = eval(input("Enter the height of the triangle: "))
+            Area = 0.5 * base * height
+            print(f"Area of Triangle = {Area}")
+        elif choice == 6:
+            # Calculate the area and perimeter of a square
+            a = eval(input("Enter the side length of the square: "))
+            Area = a**2
+            Perimeter = 4 * a
+            print(f"Area of Square = {Area}")
+            print(f"Perimeter of Square = {Perimeter}")
+        elif choice == 7:
+            # Calculate the area of a triangle using Heron's Formula
+            a = eval(input("Enter the first side length of the triangle: "))
+            b = eval(input("Enter the second side length of the triangle: "))
+            c = eval(input("Enter the third side length of the triangle: "))
+            s = (a + b + c) / 2
+            Area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+            print(f"Area of Triangle (Heron's Formula) = {Area}")
+        elif choice == 8:
+            # Calculate the area and perimeter of a parallelogram
+            base = eval(input("Enter the base length of the parallelogram: "))
+            height = eval(input("Enter the height of the parallelogram: "))
+            Area = base * height
+            Perimeter = 2 * (base + height)
+            print(f"Area of Parallelogram = {Area}")
+            print(f"Perimeter of Parallelogram = {Perimeter}")
+        # Add more conditions for the remaining shapes with their formulas
+        elif choice == 9:
+            # Calculate the area and perimeter of a rhombus
+            d1 = eval(input("Enter the length of the first diagonal: "))
+            d2 = eval(input("Enter the length of the second diagonal: "))
+            Area = 0.5 * d1 * d2
+            Perimeter = 4 * math.sqrt((d1/2)**2 + (d2/2)**2)
+            print(f"Area of Rhombus = {Area}")
+            print(f"Perimeter of Rhombus = {Perimeter}")
+        elif choice == 10:
+            # Calculate the area and perimeter of a right-angled triangle
+            base = eval(input("Enter the base length of the triangle: "))
+            height = eval(input("Enter the height of the triangle: "))
+            hypotenuse = math.sqrt(base**2 + height**2)
+            Area = 0.5 * base * height
+            Perimeter = base + height + hypotenuse
+            print(f"Area of Right Angle Triangle = {Area}")
+            print(f"Perimeter of Right Angle Triangle = {Perimeter}")
+        elif choice == 11:
+            # Calculate the area and perimeter of an isosceles right-angled triangle
+            leg = eval(input("Enter the length of the legs of the triangle: "))
+            hypotenuse = leg * math.sqrt(2)
+            Area = 0.5 * leg**2
+            Perimeter = 2 * leg + hypotenuse
+            print(f"Area of Isosceles Right Angle Triangle = {Area}")
+            print(f"Perimeter of Isosceles Right Angle Triangle = {Perimeter}")
+        elif choice == 12:
+            # Calculate the area and perimeter of an equilateral triangle
+            a = eval(input("Enter the side length of the equilateral triangle: "))
+            Area = (math.sqrt(3) / 4) * a**2
+            Perimeter = 3 * a
+            print(f"Area of Equilateral Triangle = {Area}")
+            print(f"Perimeter of Equilateral Triangle = {Perimeter}")
+        elif choice == 13:
+            # Calculate the area of a trapezium
+            a = eval(input("Enter the length of the first parallel side: "))
+            b = eval(input("Enter the length of the second parallel side: "))
+            height = eval(input("Enter the height of the trapezium: "))
+            Area = 0.5 * (a + b) * height
+            print(f"Area of Trapezium = {Area}")
+            # Perimeter is not uniquely defined for a trapezium, so we omit it
+        # Continue adding more conditions for the remaining shapes with their formulas
+        elif choice == 14:
+            # Calculate the area of a quadrilateral
+            a = eval(input("Enter the first side length: "))
+            b = eval(input("Enter the second side length: "))
+            c = eval(input("Enter the third side length: "))
+            d = eval(input("Enter the fourth side length: "))
+            s = (a + b + c + d) / 2
+            Area = math.sqrt((s - a) * (s - b) * (s - c) * (s - d))
+            # Perimeter is the sum of all sides
+            Perimeter = a + b + c + d
+            print(f"Area of Quadrilateral = {Area}")
+            print(f"Perimeter of Quadrilateral = {Perimeter}")
+        elif choice == 15:
+            # Calculate the area of a kite
+            d1 = eval(input("Enter the length of the first diagonal: "))
+            d2 = eval(input("Enter the length of the second diagonal: "))
+            Area = 0.5 * d1 * d2
+            # Perimeter is the sum of the four sides
+            Perimeter = 2 * (eval(input("Enter the length of one side: ")) + eval(input("Enter the length of another side: ")))
+            print(f"Area of Kite = {Area}")
+            print(f"Perimeter of Kite = {Perimeter}")
+        elif choice == 16:
+            # Calculate the area of a circle sector
+            r = eval(input("Enter the radius of the circle: "))
+            theta = eval(input("Enter the angle (in degrees) of the sector: "))
+            Area = (theta / 360) * 3.14 * (r**2)
+            # Circumference of the sector is the arc length, which is a fraction of the whole circumference
+            Circumference = (theta / 360) * 2 * 3.14 * r
+            print(f"Area of Circle Sector = {Area}")
+            print(f"Circumference of Circle Sector = {Circumference}")
+        elif choice == 17:
+            # Calculate the curved surface area and surface area of a frustum
+            r1 = eval(input("Enter the radius of the larger base: "))
+            r2 = eval(input("Enter the radius of the smaller base: "))
+            h = eval(input("Enter the height of the frustum: "))
+            l = math.sqrt((r1 - r2)**2 + h**2)  # Slant height
+            # Curved surface area
+            CSA = 3.14 * (r1 + r2) * l
+            # Surface area
+            Surface_Area = 3.14 * (r1**2 + r2**2 + r1 * r2)
+            print(f"Curved Surface Area of Frustum = {CSA}")
+            print(f"Surface Area of Frustum = {Surface_Area}")
+        # Continue adding more conditions for the remaining shapes with their formulas
+        elif choice == 18:
+            # Calculate the volume and total surface area of a cuboid
+            length = eval(input("Enter the length of the cuboid: "))
+            breadth = eval(input("Enter the breadth of the cuboid: "))
+            height = eval(input("Enter the height of the cuboid: "))
+            Volume = length * breadth * height
+            Total_Surface_Area = 2 * (length * breadth + breadth * height + height * length)
+            print(f"Volume of Cuboid = {Volume}")
+            print(f"Total Surface Area of Cuboid = {Total_Surface_Area}")
+        elif choice == 19:
+            # Calculate the volume and total surface area of a right circular cylinder
+            r = eval(input("Enter the radius of the cylinder: "))
+            h = eval(input("Enter the height of the cylinder: "))
+            Volume = 3.14 * r**2 * h
+            Lateral_Surface_Area = 2 * 3.14 * r * h
+            Total_Surface_Area = 2 * 3.14 * r * (r + h)
+            print(f"Volume of Right Circular Cylinder = {Volume}")
+            print(f"Lateral Surface Area of Cylinder = {Lateral_Surface_Area}")
+            print(f"Total Surface Area of Cylinder = {Total_Surface_Area}")
+        elif choice == 20:
+            # Calculate the volume, curved surface area, and total surface area of a right circular cone
+            r = eval(input("Enter the radius of the cone's base: "))
+            h = eval(input("Enter the height of the cone: "))
+            Volume = (1/3) * 3.14 * r**2 * h
+            Curved_Surface_Area = 3.14 * r * math.sqrt(r**2 + h**2)
+            Total_Surface_Area = 3.14 * r * (r + math.sqrt(r**2 + h**2))
+            print(f"Volume of Right Circular Cone = {Volume}")
+            print(f"Curved Surface Area of Cone = {Curved_Surface_Area}")
+            print(f"Total Surface Area of Cone = {Total_Surface_Area}")
+        elif choice == 21:
+            # Calculate the volume and surface area of a sphere
+            r = eval(input("Enter the radius of the sphere: "))
+            Volume = (4/3) * 3.14 * r**3
+            Surface_Area = 4 * 3.14 * r**2
+            print(f"Volume of Sphere = {Volume}")
+            print(f"Surface Area of Sphere = {Surface_Area}")
+
+        elif choice == 22:
+            # Calculate the volume and curved surface area of a hemisphere
+            r = eval(input("Enter the radius of the hemisphere: "))
+            Volume = (2/3) * 3.14 * r**3
+            Curved_Surface_Area = 2 * 3.14 * r**2
+            print(f"Volume of Hemisphere = {Volume}")
+            print(f"Curved Surface Area of Hemisphere = {Curved_Surface_Area}")
+        # Continue adding more conditions for the remaining shapes with their formulas
+        elif choice == 23:
+            # Calculate the volume and lateral surface area of a prism
+            base_area = eval(input("Enter the base area of the prism: "))
+            height = eval(input("Enter the height of the prism: "))
+            Volume = base_area * height
+            # Lateral Surface Area is the perimeter of the base multiplied by height
+            Lateral_Surface_Area = eval(input("Enter the perimeter of the base: ")) * height
+            print(f"Volume of Prism = {Volume}")
+            print(f"Lateral Surface Area of Prism = {Lateral_Surface_Area}")
+        elif choice == 24:
+            # Calculate the volume, area of the lateral faces, and total surface area of a pyramid
+            base_area = eval(input("Enter the area of the base: "))
+            height = eval(input("Enter the height of the pyramid: "))
+            Volume = (1/3) * base_area * height
+            Lateral_Face_Area = eval(input("Enter the perimeter of the base: ")) * height / 2  # Assuming it's a regular pyramid
+            Total_Surface_Area = base_area + Lateral_Face_Area
+            print(f"Volume of Pyramid = {Volume}")
+            print(f"Area of Lateral Faces of Pyramid = {Lateral_Face_Area}")
+            print(f"Total Surface Area of Pyramid = {Total_Surface_Area}")
+        elif choice == 25:
+            # Calculate the volume of a tetrahedron
+            a = eval(input("Enter the edge length of the tetrahedron: "))
+            Volume = (math.sqrt(2) / 12) * a**3
+            print(f"Volume of Tetrahedron = {Volume}")
+        elif choice == 26:
+            # Calculate the area and perimeter of a regular hexagon
+            a = eval(input("Enter the side length of the hexagon: "))
+            Area = (3 * math.sqrt(3) / 2) * a**2
+            Perimeter = 6 * a
+            print(f"Area of Regular Hexagon = {Area}")
+            print(f"Perimeter of Regular Hexagon = {Perimeter}")
+        elif choice == 27:
+            # Calculate the area and perimeter of miscellaneous shapes
+            print("1. Area of Pathway running across the middle of a rectangle")
+            print("2. Perimeter of Pathway around a rectangle field")
+            print("3. Area of Pathway around a rectangle field")
+            print("4. Perimeter of Pathway inside a rectangle field")
+            print("5. Area of four walls")
+            misc_choice = int(input("Enter your choice for miscellaneous shape calculation: "))
+            if misc_choice == 1:
+                w = eval(input("Enter the width of the pathway: "))
+                l = eval(input("Enter the length of the rectangle: "))
+                b = eval(input("Enter the breadth of the rectangle: "))
+                Area = w * (l + b - w)
+                print(f"Area of Pathway = {Area}")
+            elif misc_choice == 2:
+                l = eval(input("Enter the length of the rectangle field: "))
+                b = eval(input("Enter the breadth of the rectangle field: "))
+                w = eval(input("Enter the width of the pathway: "))
+                Perimeter = 2 * (l + b + 4 * w)
+                print(f"Perimeter of Pathway around the field = {Perimeter}")
+            elif misc_choice == 3:
+                w = eval(input("Enter the width of the pathway: "))
+                l = eval(input("Enter the length of the rectangle field: "))
+                b = eval(input("Enter the breadth of the rectangle field: "))
+                Area = 2 * w * (l + b + 2 * w)
+                print(f"Area of Pathway around the field = {Area}")
+            elif misc_choice == 4:
+                l = eval(input("Enter the length of the rectangle field: "))
+                b = eval(input("Enter the breadth of the rectangle field: "))
+                w = eval(input("Enter the width of the pathway: "))
+                Perimeter = 2 * (l + b - 4 * w)
+                print(f"Perimeter of Pathway inside the field = {Perimeter}")
+            elif misc_choice == 5:
+                h = eval(input("Enter the height of the four walls: "))
+                l = eval(input("Enter the length of the room: "))
+                b = eval(input("Enter the breadth of the room: "))
+                Area = 2 * h * (l + b)
+                print(f"Area of Four Walls = {Area}")
+            else:
+                print("Invalid choice for miscellaneous shape calculation")
+        elif choice == 0:
+                print("Thanks! You are Exiting the program......")
+                print("Press Enter for Continue or any other key for exit!")
+                a = input()
+                if a == "":  # Restart the loop if the user presses Enter
+                    print("Welcome Back to Shape area and perimeter calculations Application.")
+                    print("Read Carefully then Entetr your choice to find the Area")
+                    continue
+                else:
+                    print("Thanks! for using DKSRA Shape area and perimeter calculations App.")
+                    break # Exit the program if the user enters any key other than Ente 
+        else:
+            # Handle invalid input
+            print("Invalide Choice!")
+            print("Read Carefully then Entetr your choice to find the Area")
+            continue
+        break
+    except ValueError:
+        # Handle non-numeric input gracefully
+        print("Invalid input! Please enter a valid numeric value for marks.")
