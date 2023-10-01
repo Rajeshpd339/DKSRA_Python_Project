@@ -1,0 +1,75 @@
+# Print a welcome message for the base conversion application
+print("Welcome to DKSRA Base Conversion Application:")
+
+# Create an infinite loop to keep the application running until the user chooses to exit
+while True:
+    # Display menu options to the user
+    print("For Enter Decimal Number press-1")
+    print("For Enter Binary Number press-2")
+    print("For Enter Octal Number press-3")
+    print("For Enter Hexadecimal Number press-4")
+    print("Press 0 for Exit")
+    
+    # Read the user's choice
+    choice = int(input())
+    
+    # Check the user's choice and perform the corresponding conversion
+    if choice == 1:  # Decimal to other bases
+        number = int(input("Enter Decimal Number: "))
+        print("Convert Decimal to Binary Number press-2")
+        print("Convert Decimal to Octal Number press-3")
+        print("Convert Decimal to Hexadecimal Number press-4")
+        a = 123  # We are applying a condition for 3 times; if the user enters the wrong choice 3 times, the loop will continue; otherwise, it will break
+        while a > 0:
+            user_choice = int(input("Enter your choice 2,3,4="))
+            if user_choice == 2:
+                result = bin(number)[2:]  # Convert decimal to binary and remove the '0b' prefix
+                print("Binary Number is:", result)
+            elif user_choice == 3:
+                result = oct(number)[2:]  # Convert decimal to octal and remove the '0o' prefix
+                print("Octal Number is:", result)
+            elif user_choice == 4:
+                result = hex(number)[2:]  # Convert decimal to hexadecimal and remove the '0x' prefix
+                print("Hexadecimal Number is:", result)
+            else:
+                print("Sorry you Enter the wrong choice!")
+                a = a // 10
+                continue
+            break
+    
+    # Similar code structure for other base conversions (binary, octal, and hexadecimal)
+    elif choice == 2:  # Binary to other bases
+        number = int(input("Enter Binary Number: "), 2)
+        print("Convert Binary to Decimal Number press-1")
+        print("Convert Binary to Octal Number press-3")
+        print("Convert Binary to Hexadecimal Number press-4")
+        # ...
+    
+    elif choice == 3:  # Octal to other bases
+        number = int(input("Enter Octal Number: "), 8)
+        print("Convert Octal to Decimal Number press-1")
+        print("Convert Octal to Binary Number press-2")
+        print("Convert Octal to Hexadecimal Number press-4")
+        # ...
+    
+    elif choice == 4:  # Hexadecimal to other bases
+        number = int(input("Enter Hexadecimal Number: "), 16)
+        print("Convert Hexadecimal to Decimal Number press-1")
+        print("Convert Hexadecimal to Binary Number press-2")
+        print("Convert Hexadecimal to Octal Number press-3")
+        # ...
+    
+    elif choice == 0:  # Exit the program
+        print("Thanks! You are Exiting the program......")
+        print("Press Enter for Continue or any other key for exit!")
+        a = input()
+        if a == "":  # Used to restart the loop if the user presses Enter
+            print("Welcome Back to DSKRA Base Conversion Application:")
+            continue
+        else:
+            break
+    
+    else:  # Invalid choice
+        print("Sorry! Your Given number is Invalid")
+        print("Re-Enter your Number")
+        continue
