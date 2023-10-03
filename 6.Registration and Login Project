@@ -1,0 +1,62 @@
+# Display a welcome message
+print("Welcome to T3 test")
+
+# Initialize empty lists to store login information
+login_ids = []
+passwords = []
+
+# Start an infinite loop for registration and login
+while True:
+    print("Register Here:")
+    
+    # Prompt the user for registration details
+    Name = input("Enter your Name: ")
+    Mobile_Number = input("Enter your Mobile Number: ")
+    Email_id = input("Enter Your Email Id: ")
+    
+    # Start a loop to set and verify the password
+    while True:
+        pwd1 = input("Set Your Password: ")
+        pwd2 = input("Re-Enter Your Password: ")
+        
+        # Check if the entered passwords match
+        if pwd1 == pwd2:
+            # Registration successful, store login information in lists
+            login_ids.append(Email_id)
+            passwords.append(pwd2)
+            print("Registration is successful !!!")
+            print("Your Login Id is:", Email_id)
+            print("Your Password is:", pwd2)
+            break  # Exit the password matching loop
+        else:
+            print("Password mismatch. Please try again.")
+    
+    # Ask the user if they want to register again or login
+    print("Press Enter for New Registration or press 'c' to continue")
+    choice = input()
+    
+    # Check the user's choice
+    if choice == "":
+        continue  # Continue with a new registration
+    elif choice.lower() == 'c':
+        print("Login")
+        loginid = input("Enter Login ID: ")
+        password = input("Enter Password: ")
+        
+        # Check if the entered login ID and password are in the lists
+        if loginid in login_ids:
+            index = login_ids.index(loginid)
+            
+            # Check if the entered password matches the stored password
+            if passwords[index] == password:
+                print("Login Successful !!!")
+                print("Welcome to T3 Skills Center")
+            else:
+                print("Invalid password")
+        else:
+            print("Invalid Login ID")
+    else:
+        print("Invalid choice. Please try again.")
+    
+    # Exit the main loop after registration or login is complete
+    break
