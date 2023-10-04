@@ -1,0 +1,271 @@
+print("Read the instruction\n1. Number of questions = 10\n2. Duration: 30 minutes\n3. Total marks: 10\n4. Negative marking: -1/4")
+print("Start your test")
+
+score = 0
+wrong = 0
+
+# Question 1
+print("1. Which of the following is not a valid data type in Python?")
+print('''A. int
+B. float
+C. char
+D. str''')
+answer = input("Answer: ").strip().lower()
+if answer == 'c':
+    score += 1
+else:
+    wrong += 1
+
+# Question 2
+print("2. Which operator is used for exponentiation in Python?")
+print('''A. **
+B. ^
+C. //
+D. %''')
+answer = input("Answer: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# Question 3
+print('3. What is the output of print("Hello" + "World") in Python?')
+print('''A. HelloWorld
+B. Hello World
+C. Hello + World
+D. Error''')
+answer = input("Answer: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# Question 4
+print("4. How do you declare a function in Python?")
+print('''A. def my_function():
+B. function my_function():
+C. func my_function():
+D. def function my_function():''')
+answer = input("Answer: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# Question 5
+print("5. What is the purpose of the 'elif' keyword in Python?")
+print('''A. It is used to end a loop.
+B. It is used to define a function.
+C. It is used to handle multiple conditions in an 'if' statement.
+D. It is used to create a comment.''')
+answer = input("Answer: ").strip().lower()
+if answer == 'c':
+    score += 1
+else:
+    wrong += 1
+
+# Question 6
+print("6. Which module in Python is used for working with regular expressions?")
+print('''A. re
+B. regex
+C. string
+D. math''')
+answer = input("Answer: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# Question 7
+print("7. In Python, what is the result of 5 == '5'?")
+print('''A. True
+B. False
+C. Error
+D. None''')
+answer = input("Answer: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# Question 8
+print("8. What is the output of '5 / 2' in Python?")
+print('''A. 2.5
+B. 2
+C. 3
+D. 2.0''')
+answer = input("Answer: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# Question 9
+print("9. Which of the following is used to iterate over a sequence in Python?")
+print('''A. for loop
+B. while loop
+C. if statement
+D. switch case''')
+answer = input("Answer: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# Question 10
+print("10. What is the result of '5 // 2' in Python?")
+print('''A. 2.5
+B. 2
+C. 3
+D. 2.0''')
+answer = input("Answer: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# Display results
+print(f"\nYour Score: {score} / 10")
+print(f"Wrong Answers: {wrong}")
+
+# Calculate total marks with negative marking (-1/4 for each wrong answer)
+total_marks = score - (wrong * 0.25)
+print(f"Total Marks: {total_marks}")
+
+
+
+....................hindi...............
+# -*- coding: utf-8 -*-
+print("पढ़ाई के निर्देश\n1. प्रश्नों की संख्या = 10\n2. अवधि: 30 मिनट\n3. कुल अंक: 10\n4. नकारात्मक अंकन: -1/4")
+print("अपना परीक्षण शुरू करें")
+
+score = 0
+wrong = 0
+
+# प्रश्न 1
+print("1. Python में निम्नलिखित में से कौन सा डेटा प्रकार मान्य नहीं है?")
+print('''A. int
+B. float
+C. char
+D. str''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'c':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 2
+print("2. Python में घातांकण के लिए कौन सा ऑपरेटर प्रयुक्त होता है?")
+print('''A. **
+B. ^
+C. //
+D. %''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 3
+print('3. Python में print("Hello" + "World") का उत्पाद क्या है?')
+print('''A. HelloWorld
+B. Hello World
+C. Hello + World
+D. Error''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 4
+print("4. Python में फ़ंक्शन कैसे घोषित किया जाता है?")
+print('''A. def my_function():
+B. function my_function():
+C. func my_function():
+D. def function my_function():''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 5
+print("5. 'elif' की प्रयोगिता क्या है?")
+print('''A. इसका उपयोग एक लूप को समाप्त करने के लिए होता है।
+B. एक फ़ंक्शन को परिभाषित करने के लिए होता है।
+C. इसका उपयोग 'if' वक्तवारी में विभिन्न स्थितियों का संचालन करने के लिए होता है।
+D. इसका उपयोग टिप्पणी बनाने के लिए होता है।''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'c':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 6
+print("6. Python में नियमित अभिव्यक्तियों के साथ काम करने के लिए कौन सा मॉड्यूल प्रयुक्त होता है?")
+print('''A. re
+B. regex
+C. string
+D. math''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 7
+print("7. Python में, 5 == '5' का परिणाम क्या है?")
+print('''A. सही
+B. गलत
+C. त्रुटि
+D. कोई नहीं''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 8
+print("8. Python में '5 / 2' का उत्पाद क्या है?")
+print('''A. 2.5
+B. 2
+C. 3
+D. 2.0''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 9
+print("9. Python में एक अनुक्रम पर यात्रा करने के लिए कौन सा विधि प्रयुक्त होता है?")
+print('''A. for लूप
+B. while लूप
+C. if स्टेटमेंट
+D. switch केस''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'a':
+    score += 1
+else:
+    wrong += 1
+
+# प्रश्न 10
+print("10. Python में '5 // 2' का परिणाम क्या है?")
+print('''A. 2.5
+B. 2
+C. 3
+D. 2.0''')
+answer = input("उत्तर: ").strip().lower()
+if answer == 'b':
+    score += 1
+else:
+    wrong += 1
+
+# परिणाम प्रदर्शित करें
+print(f"\nआपका स्कोर: {score} / 10")
+print(f"गलत उत्तर: {wrong}")
+
+# नकारात्मक अंकन के साथ कुल अंक की गणना करें (-1/4 हर गलत उत्तर के लिए)
+total_marks = score - (wrong * 0.25)
+print(f"कुल अंक: {total_marks}")
