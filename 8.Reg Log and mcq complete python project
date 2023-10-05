@@ -1,0 +1,179 @@
+print("Welcome to T3 skills center test series")
+# Initialize empty lists to store login information
+login_ids = []
+passwords = []
+Right_Answer={}
+Wrong_Answer={}
+while True:
+    print("Register Here:")
+    Name = input("Enter your Name: ")
+    Mobile_Number = input("Enter your Mobile Number: ")
+    Email_id = input("Enter Your Email Id: ")
+    while True:
+        pwd1 = input("Set Your Password: ")
+        pwd2 = input("Re-Enter Your Password: ")
+        if pwd1 == pwd2:
+            # Registration successful, store login information in lists
+            login_ids.append(Email_id)
+            passwords.append(pwd2)
+            print("Registration is successful !!!")
+            print("Your Login Id is:", Email_id)
+            print("Your Password is:", pwd2)
+            break  # Exit the password matching loop
+        else:
+            print("Password mismatch. Please try again.")
+    print("Press Enter for New Registration or press 'C' to continue")
+    choice = input()
+    if choice == "":
+        continue  # Continue with new registration
+    elif choice.lower() == 'c':
+        print("Login")
+        loginid = input("Enter Login ID: ")
+        password = input("Enter Password: ")
+        # Check if the entered login ID and password are in the lists
+        if loginid in login_ids:
+            index = login_ids.index(loginid)
+            if passwords[index] == password:
+                print("Login Successful !!!")
+                print(Name,"Welcome to T3 Skills Center")
+                print("Read the instruction\n1. Number of questions = 10\n2. Duration: 30 minutes\n3. Total marks: 10\n4. Negative marking: -1/4")
+                print("For start your test...press Enter")
+                input()
+                print("...................................................................................\n")
+                print("\t\t\t Name:",Name,"\t\t\tTime: 10 minutes")
+                print("\t\t\t Login Id:",loginid)
+                print("...................................................................................\n")
+                score = 0
+                wrong = 0
+                # Question 1
+                print("1. Which of the following is not a valid data type in Python?")
+                print("A. int\nB. float\nC. char\nD. str")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'c':
+                    score += 1
+                    Right_Answer[1]=answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[1]=answer
+                # Question 2
+                print("2. Which operator is used for exponentiation in Python?")
+                print("A. **\nB. ^\nC. //\nD. %")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'a':
+                    score += 1
+                    Right_Answer[2] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[2] = answer
+
+                # Question 3
+                print('3. What is the output of print("Hello" + "World") in Python?')
+                print("A. HelloWorld\nB. Hello World\nC. Hello + World\nD. Error")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'b':
+                    score += 1
+                    Right_Answer[3] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[3] = answer
+                # Question 4
+                print("4. How do you declare a function in Python?")
+                print("A. def my_function():\nB. function my_function():\nC. func my_function():\nD. def function my_function():")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'a':
+                    score += 1
+                    Right_Answer[4] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[4] = answer
+                # Question 5
+                print("5. What is the purpose of the 'elif' keyword in Python?")
+                print("A. It is used to end a loop.\nB. It is used to define a function.\nC. It is used to handle multiple conditions in an 'if' statement.\nD. It is used to create a comment.")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'c':
+                    score += 1
+                    Right_Answer[5] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[5] = answer
+                # Question 6
+                print("6. Which module in Python is used for working with regular expressions?")
+                print("A. re\nB. regex\nC. string\nD. math")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'a':
+                    score += 1
+                    Right_Answer[6] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[6] = answer
+                # Question 7
+                print("7. In Python, what is the result of 5 == '5'?")
+                print("A. True\tB. False\nC. Error\nD. None")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'b':
+                    score += 1
+                    Right_Answer[7] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[7] = answer
+                # Question 8
+                print("8. What is the output of '5 / 2' in Python?")
+                print("A. 2.5\nB. 2\nC. 3\nD. 2.0")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'a':
+                    score += 1
+                    Right_Answer[8] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[8] = answer
+                # Question 9
+                print("9. Which of the following is used to iterate over a sequence in Python?")
+                print("A. for loop\nB. while loop\nC. if statement\nD. switch case")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'a':
+                    score += 1
+                    Right_Answer[9] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[9] = answer
+                # Question 10
+                print("10. What is the result of '5 // 2' in Python?")
+                print("A. 2.5\nB. 2\nC. 3\nD. 2.0")
+                answer = input("Answer: ").strip().lower()
+                if answer == 'b':
+                    score += 1
+                    Right_Answer[10] = answer
+                else:
+                    wrong += 1
+                    Wrong_Answer[10] = answer
+                # Display results
+                print(f"\nYour Score: {score} / 10")
+                print(f"Wrong Answers: {wrong}")
+                # Calculate total marks with negative marking (-1/4 for each wrong answer)
+                total_marks = score - (wrong * 0.25)
+                if total_marks>=8 and total_marks<=10:
+                    print("Excelent Performance")
+                    print(f"Mr.{Name} Your Total Marks={total_marks}")
+                elif total_marks>=5 and total_marks<8:
+                    print("Good performance")
+                    print(f"Mr.{Name} Your Total Marks={total_marks}")
+                else:
+                    print("Your performance is very poor")
+                    print(f"Mr.{Name} Your Total Marks={total_marks}")
+                print("Press Enter for Check Right and Wrong Answer.or Zero for Exit")
+                a=input()
+                if a=="":
+                    print("...................................................................................")
+                    print("\tRight Answers:",Right_Answer)
+                    print("\tWrong Answers:",Wrong_Answer)
+                    print("...................................................................................")
+                else:
+                    print("Thanks!")
+                    break     
+            else:
+                print("Invalid password")
+        else:
+            print("Invalid Login ID")
+    else:
+        print("Invalid choice. Please try again.")
+    break
